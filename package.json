@@ -1,0 +1,27 @@
+{
+  "name": "automated-testing",
+  "version": "1.0.0",
+  "description": "automated testing cypress example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamknap/Automated-Testing.git"
+  },
+  "keywords": [
+    "automation",
+    "cypress",
+    "tests"
+  ],
+  "author": "Kamil Knapik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kamknap/Automated-Testing/issues"
+  },
+  "homepage": "https://github.com/kamknap/Automated-Testing#readme",
+  "devDependencies": {
+    "cypress": "^14.0.3"
+  }
+}
