@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 import Base from "../pages/Base";
-import Search from "../pages/Search";
 import Home from "../pages/Home";
 import Women from "../pages/Women";
 import Product from "../pages/Product";
