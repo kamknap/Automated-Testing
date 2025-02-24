@@ -1,9 +1,9 @@
 # 🤖 Automated Testing (Cypress)
-### Description
+## Description
 This repository showcases my automated testing skills using Cypress. The tests are structured following the Page Object Model (POM) and focus on an e-commerce store's functionalities. The tests are divided into two main categories: Search Functionality and Cart Functionality.
 
-### Contents
-[**1. Cart Functionality**](https://github.com/kamknap/Automated-Testing/blob/main/cypress/e2e/cart.cy.js)
+## Contents
+### [**1. Cart Functionality**](https://github.com/kamknap/Automated-Testing/blob/main/cypress/e2e/cart.cy.js)
 
 - **File:** cart.cy.js
 
@@ -19,7 +19,7 @@ This file contains tests related to the cart functionality, including adding a p
   
   - Delete product from cart: Checks if a product can be deleted from the cart and if the cart displays an empty message afterward.
 
-[**2. Search Functionality**](https://github.com/kamknap/Automated-Testing/blob/main/cypress/e2e/search.cy.js)
+### [**2. Search Functionality**](https://github.com/kamknap/Automated-Testing/blob/main/cypress/e2e/search.cy.js)
 
 - **File:** search.cy.js
 
