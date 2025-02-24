@@ -13,13 +13,15 @@ describe("Cart related tests", function () {
     Women.clickSecondItem();
     cy.wait(2000);
     Product.clickWhiteColor();
+    cy.wait(2000);
     Product.clickAddToCartBtn();
+    cy.wait(2000);
     // cy.get('span[title="Close window"]').should("be.visible");
     cy.get(".layer_cart_product > h2").should("contain.text", productAddedOk);
-    cy.wait(2000);
     Product.clickCloseWindow();
-    cy.wait(2000);
     Product.clickCartBtn();
+
+    cy.get("#cart_summary").should("be.visible");
   });
 });
 

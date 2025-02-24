@@ -11,6 +11,10 @@ class Product {
     return cy.get(".cross");
   }
 
+  get proceedToCheckout() {
+    return cy.get('a[title="Proceed to checkout"]');
+  }
+
   get cartBtn() {
     return cy.get('[title="View my shopping cart"]');
   }
@@ -29,6 +33,10 @@ class Product {
 
   clickCartBtn() {
     this.cartBtn.click();
+  }
+
+  clickProceedToCheckout() {
+    this.proceedToCheckout.click();
   }
 }
 

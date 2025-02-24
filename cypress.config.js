@@ -12,7 +12,7 @@ module.exports = defineConfig({
       openMode: 1,
     },
     watchForFileChanges: true,
-    chromeWebSecurity: false,
+    chromeWebSecurity: true,
     viewportWidth: 1920,
     viewportHeight: 1080,
     waitForAnimations: true,
