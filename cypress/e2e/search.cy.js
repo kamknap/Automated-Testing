@@ -17,12 +17,14 @@ describe("Search input related tests", function () {
     );
     cy.get(".primary_block").should("be.visible");
   });
+
   it("Search unaviable product", function () {
     Base.openHomePage();
     Search.typeSearchInput(unaviableSearchPhrase + "{enter}");
     Search.searchInput.should("have.value", unaviableSearchPhrase);
-    cy.get(".alert").should("be.visible");
+    Results.resultAlert.should("be.visible");
   });
+
   it("Search available products and check if each contains search phrase", function () {
     Base.openHomePage();
     Search.typeSearchInput(searchPhrase + "{enter}");

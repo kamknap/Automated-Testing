@@ -15,10 +15,6 @@ class Product {
     return cy.get('a[title="Proceed to checkout"]');
   }
 
-  get cartBtn() {
-    return cy.get('[title="View my shopping cart"]');
-  }
-
   clickWhiteColor() {
     this.whiteColor.click();
   }
@@ -29,10 +25,6 @@ class Product {
 
   clickCloseWindow() {
     this.closeWindow.click();
-  }
-
-  clickCartBtn() {
-    this.cartBtn.click();
   }
 
   clickProceedToCheckout() {

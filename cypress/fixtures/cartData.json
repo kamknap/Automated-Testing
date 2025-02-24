@@ -1,3 +1,4 @@
 {
-  "productAddedOk": "Product successfully added to your shopping cart"
+  "productAddedOk": "Product successfully added to your shopping cart",
+  "emptyCart": "Your shopping cart is empty."
 }
