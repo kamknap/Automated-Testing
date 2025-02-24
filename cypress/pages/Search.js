@@ -11,7 +11,7 @@ class Search {
     this.searchInput.clear();
   }
 
-  clickItem(item) {
+  clickFirstItem(item) {
     cy.get(item).first().click();
   }
 }

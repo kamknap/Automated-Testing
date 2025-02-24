@@ -12,7 +12,7 @@ describe("Search input related tests", function () {
     Base.openHomePage();
     Search.typeSearchInput(searchPhrase + "{enter}");
     Search.searchInput.should("have.value", "Printed Dress");
-    Search.clickItem(
+    Search.clickFirstItem(
       ".first-in-line.first-item-of-tablet-line > .product-container > .right-block > h5 > .product-name"
     );
     cy.get(".primary_block").should("be.visible");
@@ -27,7 +27,6 @@ describe("Search input related tests", function () {
     Base.openHomePage();
     Search.typeSearchInput(searchPhrase + "{enter}");
     Search.searchInput.should("have.value", searchPhrase);
-
     cy.get("#center_column").each(($el) => {
       cy.wrap($el).should("contain.text", searchPhrase);
     });
