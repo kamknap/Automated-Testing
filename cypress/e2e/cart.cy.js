@@ -16,13 +16,11 @@ describe("Cart related tests", function () {
     cy.wait(2000);
     Product.clickAddToCartBtn();
     cy.wait(2000);
-    // cy.get('span[title="Close window"]').should("be.visible");
+    // Vrify if product added information appears
     cy.get(".layer_cart_product > h2").should("contain.text", productAddedOk);
     Product.clickCloseWindow();
     Product.clickCartBtn();
-
+    // Verify if product is in cart
     cy.get("#cart_summary").should("be.visible");
   });
 });
-
-//span[class="button ajax_add_to_cart_button btn btn-default disabled"
