@@ -9,11 +9,11 @@ def launchChrome(context):
     context.browser=webdriver.Chrome()
 
 @when(u'Open OrangeHRM homepage')
-def step_impl(context):
+def openWebsite(context):
     context.browser.get("https://opensource-demo.orangehrmlive.com/")
 
 @when(u'Enter username "{usermane}" and password "{password}"')
-def step_impl(context, username, password):
+def enterData(context, username, password):
     time.sleep(2)
     username_field = context.browser.find_element(By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input')
     password_field = context.browser.find_element(By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input')
@@ -21,12 +21,12 @@ def step_impl(context, username, password):
     password_field.send_keys(password)
 
 @when(u'Click the Login button')
-def step_impl(context):
+def clickButton(context):
     button = context.browser.find_element(By.XPATH, '//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button')
     button.click()
 
 @then(u'User succefully login to dashboard page')
-def step_impl(context):
+def verify(context):
     time.sleep(2)
     text = context.browser.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6')
     assert text.text == "Dashboard"
