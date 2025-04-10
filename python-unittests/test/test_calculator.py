@@ -7,28 +7,28 @@ class TestCalculator(unittest.TestCase):
     def setUp(self):
         self.calc = Calculator()
 
-    def testAdd(self):
+    def test_add(self):
         self.assertEqual(self.calc.add(1, 2), 3)
         self.assertEqual(self.calc.add(-1, -3), -4)
         self.assertEqual(self.calc.add(-1, 500), 499)
 
-    def testSubstract(self):
+    def test_substract(self):
         self.assertEqual(self.calc.substract(1, 2), -1)
         self.assertEqual(self.calc.substract(-1, -3), 2)
         self.assertEqual(self.calc.substract(-1, 500), -501)
 
-    def testMultiply(self):
+    def test_multiply(self):
         self.assertEqual(self.calc.multiply(1, 2), 2)
         self.assertEqual(self.calc.multiply(-2, -30), 60)
         self.assertEqual(self.calc.substract(-1, 500), -501)
 
-    def testDivide(self):
+    def test_divide(self):
         self.assertEqual(self.calc.divide(1, 2), 0.5)
         self.assertEqual(self.calc.divide(-30, -2), 15)
         with self.assertRaises(ValueError):
             self.calc.divide(1,0)
 
-    def testDelta(self):
+    def test_delta(self):
         for case in deltaTestCases:
             if len(case) == 3:
                 with self.assertRaises(ValueError):
