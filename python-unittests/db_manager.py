@@ -17,7 +17,8 @@ class UserDatabase:
             self.connection.commit()
             return "User added successfully."
         except psycopg2.Error as e:
-            return f"Error: {e}"
+            self.connection.rollback()
+            raise e
 
     def get_user(self, username):
         self.cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
