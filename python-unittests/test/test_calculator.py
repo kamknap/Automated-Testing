@@ -4,8 +4,9 @@ from test.data import deltaTestCases
 
 class TestCalculator(unittest.TestCase):
 
-    def setUp(self):
-        self.calc = Calculator()
+    @classmethod
+    def setUpClass(cls):
+        cls.calc = Calculator()
 
     def test_add(self):
         self.assertEqual(self.calc.add(1, 2), 3)
