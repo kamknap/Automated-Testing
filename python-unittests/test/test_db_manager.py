@@ -38,4 +38,21 @@ class TestDatabaseManagement(unittest.TestCase):
         result = self.db.get_user("TestUser")
         self.assertIsNone(result)
 
+    def test_add_user_duplicate_email(self):
+        self.db.add_user("TestUser", "Test@example.com")
+        with self.assertRaises(Error):
+            self.db.add_user("AnotherUser", "Test@example.com") 
+
+    def test_add_user_wrong_email(self):
+        with self.assertRaises(Error):
+            self.db.add_user("TestUser", "Test@examplecom")
+
+    def test_get_not_existing_user(self):
+        with self.assertRaises(Error):
+            self.db.get_user("NotExistingUser")
+
+            
+
+
+
     
